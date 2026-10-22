@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Delete your Nyusie account</title>
+<meta name="description" content="How to delete your Nyusie account and data, in the app or on this page, and what is deleted.">
+<link rel="canonical" href="https://nyusie.com/delete-account/">
+<meta name="theme-color" content="#FBF9F5">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Nyusie">
+<meta property="og:title" content="Delete your Nyusie account">
+<meta property="og:description" content="How to delete your Nyusie account and data, in the app or on this page, and what is deleted.">
+<meta property="og:url" content="https://nyusie.com/delete-account/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/newsreader-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="../" aria-label="Nyusie home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1A1E24"/><g fill="#F2A64B"><rect x="7" y="13" width="2.6" height="6" rx="1.3"/><rect x="11.4" y="9" width="2.6" height="14" rx="1.3"/><rect x="15.8" y="11.5" width="2.6" height="9" rx="1.3"/></g><path d="M21 10.5v11l5-5.5z" fill="#FBF9F5"/></svg><span class="brand-name">Nyusie</span></a>
+    <nav class="nav" aria-label="Main"><a href="../#how">How it works</a><a href="../#plans">Plans</a><a href="../support/">Support</a><a class="nav-cta" href="../#download">Get the app</a></nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap narrow page-head">
+  <p class="eyebrow"><span class="dot"></span>Account &amp; data</p>
+  <h1>Delete your Nyusie account</h1>
+  <p class="lede">This page explains how to delete your account in <strong>Nyusie</strong>, the audio news app from 17774699 Canada Inc., what happens to your data, and how to request deletion here without the app.</p>
+  <div class="row-gap"><a class="btn btn-primary" href="#request">Request deletion on this page</a><a class="btn btn-ghost" href="#in-app">Delete in the app</a></div>
+</div>
+
+<div class="wrap narrow prose">
+
+  <div class="notice warn">
+    <strong>Have Premium? Cancel your subscription first.</strong> Deleting your Nyusie account does not cancel a subscription. Subscriptions are billed by Apple or Google, so you'll keep being charged until you cancel with them:
+    <a href="https://play.google.com/store/account/subscriptions" rel="noopener">Google Play subscriptions</a> ·
+    <a href="https://support.apple.com/en-us/118428" rel="noopener">Cancel an Apple subscription</a>.
+    Founding-member pricing ends when your account is deleted.
+  </div>
+
+  <h2 id="in-app">Delete your account in the app</h2>
+  <!-- CONFIRM: menu names below must match the app exactly before store submission. -->
+  <h3>On Android</h3>
+  <ol class="numbered">
+    <li>Open Nyusie and go to:
+      <div class="path"><span>Settings</span><i>›</i><span>Account</span><i>›</i><span>Delete account</span></div></li>
+    <li>Confirm that you want to delete your account. Nyusie then opens this page.</li>
+    <li>Enter your account email, type the 6-digit code we email you, and confirm. That completes the request.</li>
+  </ol>
+  <h3>On iPhone</h3>
+  <ol class="numbered">
+    <li>Open Nyusie and go to:
+      <div class="path"><span>Settings</span><i>›</i><span>Account</span><i>›</i><span>Delete account</span></div></li>
+    <li>Confirm that you want to delete your account. That completes the request.</li>
+  </ol>
+
+  <h2 id="request">Request deletion without the app</h2>
+  <p>Don't have the app anymore? You can request deletion right here, without installing anything.</p>
+
+  <!-- The web form switches on when webDeletionEnabled is true in assets/js/config.js.
+       Until then (and as a fallback if anything fails) the email option below is shown. -->
+  <div class="card form-card" id="del-form" hidden>
+    <div class="stepper" aria-hidden="true"><div id="st1" class="active">1 · Email</div><div id="st2">2 · Code</div><div id="st3">3 · Confirm</div></div>
+
+    <form id="step-email" novalidate>
+      <p class="sans small" style="margin:0 0 16px">We'll confirm it's you by emailing a 6-digit code to the address on your account.</p>
+      <div class="field">
+        <label for="email">Email on your Nyusie account</label>
+        <input id="email" type="email" autocomplete="email" inputmode="email" required placeholder="you@example.com">
+      </div>
+      <label class="check-row"><input id="ack" type="checkbox" required><span>I understand my account and data will be permanently deleted after 7 days, and that this does not cancel a Premium subscription.</span></label>
+      <button class="btn btn-primary btn-block" id="send-btn" type="submit">Email me a code</button>
+      <p class="msg" id="msg-email" role="status" aria-live="polite"></p>
+    </form>
+
+    <form id="step-code" novalidate hidden>
+      <p class="sans small" style="margin:0 0 16px">If a Nyusie account uses <strong id="sent-to"></strong>, we've sent it a 6-digit code. It can take a minute to arrive; check your spam folder too.</p>
+      <div class="field">
+        <label for="code">6-digit code</label>
+        <input id="code" class="code" type="text" inputmode="numeric" autocomplete="one-time-code" required placeholder="••••••">
+      </div>
+      <button class="btn btn-primary btn-block" id="verify-btn" type="submit">Continue</button>
+      <p class="msg" id="msg-code" role="status" aria-live="polite"></p>
+      <div class="row-gap" style="justify-content:space-between">
+        <button class="linkish" id="resend-btn" type="button" disabled>Send a new code</button>
+        <button class="linkish" id="change-email" type="button">Use a different email</button>
+      </div>
+    </form>
+
+    <div id="step-confirm" hidden>
+      <h3 style="margin-top:0">Delete <span id="confirm-email"></span>?</h3>
+      <p class="small">You'll be signed out of Nyusie straight away. If you change your mind, sign in to the app within 7 days and everything will be as you left it. After that, your account and data are permanently deleted.</p>
+      <button class="btn btn-danger btn-block" id="delete-btn" type="button">Delete my account</button>
+      <p class="msg" id="msg-confirm" role="status" aria-live="polite"></p>
+    </div>
+
+    <div id="step-done" hidden>
+      <p class="eyebrow" style="color:var(--ok)">Request received</p>
+      <h3 style="margin-top:0">Your account is scheduled for deletion</h3>
+      <p class="small">You've been signed out of Nyusie. Your account and data will be permanently deleted on <strong id="done-date"></strong>.</p>
+      <p class="small">Changed your mind? Sign in to the Nyusie app within the next 7 days to keep your account.</p>
+    </div>
+  </div>
+
+  <div class="card form-card" id="email-route">
+    <h3 style="margin-top:0" id="email-route-title">Request by email</h3>
+    <p class="small">Send an email to <a href="mailto:privacy@nyusie.com">privacy@nyusie.com</a> <strong>from the address on your Nyusie account</strong>, asking us to delete it. We'll confirm by reply, and the same 7-day timeline below applies from that confirmation.</p>
+    <a class="btn btn-primary" id="mailto-btn" href="mailto:privacy@nyusie.com?subject=Delete%20my%20Nyusie%20account&amp;body=Please%20delete%20my%20Nyusie%20account%20and%20its%20data.%0A%0AAccount%20email%3A%20%0A%0AI%20understand%20that%20deleting%20my%20account%20does%20not%20cancel%20a%20Premium%20subscription.">Write the email</a>
+  </div>
+  <p class="small muted" id="email-alt" hidden>Can't receive the code? Email <a href="mailto:privacy@nyusie.com?subject=Delete%20my%20Nyusie%20account">privacy@nyusie.com</a> from the address on your account and we'll help.</p>
+
+  <h2 id="what-happens">What happens after you confirm</h2>
+  <table>
+    <thead><tr><th style="width:34%">When</th><th>What happens</th></tr></thead>
+    <tbody>
+      <tr><td><strong>Straight away</strong></td><td>You're signed out of Nyusie on every device, and your account is scheduled for deletion.</td></tr>
+      <tr><td><strong>Days 1 to 7</strong></td><td>Your data is kept so you can change your mind. Sign in to the Nyusie app with the same account and everything is as you left it, with no need to sign up again.</td></tr>
+      <tr><td><strong>Day 8</strong></td><td>Your account and all its data are permanently deleted. This can't be undone, and we can no longer help with anything about the old account.</td></tr>
+    </tbody>
+  </table>
+  <p>You're welcome back any time. After deletion you can create a new account with the same email address; it starts fresh on the Free plan.</p>
+
+  <h2 id="data">What is deleted</h2>
+  <p>On day 8 we permanently delete everything we hold about your account, including:</p>
+  <ul>
+    <li>Your account and profile: name, email address and sign-in details</li>
+    <li>Location settings and the place names used for your briefs</li>
+    <li>Your briefs, deep dives, their audio and transcripts, and your brief history</li>
+    <li>Listening activity: plays, streaks, topic usage and monthly allowance counts</li>
+    <li>Subscription and founding-member records stored by Nyusie</li>
+    <li>Records of the service emails we sent you</li>
+  </ul>
+
+  <h2 id="kept">What is kept</h2>
+  <p>Nyusie keeps nothing about your account after day 8. Two things sit outside our systems:</p>
+  <ul>
+    <li><strong>Store purchase records.</strong> If you subscribed, Apple or Google keeps its own record of your purchases under its privacy policy. We can't delete those.</li>
+    <li><strong>Audio on your phone.</strong> Briefs already downloaded to your device stay there until you uninstall Nyusie or clear its storage.</li>
+  </ul>
+
+  <h2 id="questions">Questions</h2>
+  <p>Email <a href="mailto:privacy@nyusie.com">privacy@nyusie.com</a>. Read more in our <a href="../privacy/">Privacy Policy</a>.</p>
+</div>
+
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="../" aria-label="Nyusie home"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#1A1E24"/><g fill="#F2A64B"><rect x="7" y="13" width="2.6" height="6" rx="1.3"/><rect x="11.4" y="9" width="2.6" height="14" rx="1.3"/><rect x="15.8" y="11.5" width="2.6" height="9" rx="1.3"/></g><path d="M21 10.5v11l5-5.5z" fill="#FBF9F5"/></svg><span class="brand-name">Nyusie</span></a>
+        <p style="margin:14px 0 0;max-width:30em">Personal audio news briefs, from your neighbourhood to the world. Launching November 6, 2026 on iPhone and Android.</p>
+      </div>
+      <div>
+        <h4>Nyusie</h4>
+        <ul>
+          <li><a href="../#how">How it works</a></li>
+          <li><a href="../#plans">Free &amp; Premium</a></li>
+          <li><a href="../#founding">Founding members</a></li>
+          <li><a href="../support/">Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="../privacy/">Privacy Policy</a></li>
+          <li><a href="../terms/">Terms of Use</a></li>
+          <li><a href="../delete-account/">Delete your account</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="legal">© 2026 17774699 Canada Inc., operating as Nyusie. Prices in USD.</p>
+  </div>
+</footer>
+<script src="../assets/js/supabase-2.118.0.min.js" defer></script>
+<script src="../assets/js/config.js" defer></script>
+<script src="../assets/js/delete-account.js" defer></script>
+</body>
+</html>
