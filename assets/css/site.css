@@ -348,3 +348,6 @@ input.code { letter-spacing: 0.4em; font-size: 24px; text-align: center; font-va
 .site-footer .social a { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--chip); color: var(--text-2); text-decoration: none; }
 .site-footer .social a:hover { background: var(--accent); color: var(--on-accent); }
 .site-footer .social svg { width: 18px; height: 18px; }
+
+/* Logo: wide PNG mark */
+.brand-mark { width: auto; height: 30px; }
