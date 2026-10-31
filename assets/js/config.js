@@ -18,8 +18,8 @@
  *   Store links used by the download buttons after launch.
  */
 window.NYUSIE_CONFIG = {
-  supabaseUrl: "",        // e.g. "https://abcdefghijkl.supabase.co"
-  supabaseAnonKey: "",
+  supabaseUrl: "https://ncrzeisyrzelhuwmnwxc.supabase.co",        // e.g. "https://abcdefghijkl.supabase.co"
+  supabaseAnonKey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5jcnplaXN5cnplbGh1d21ud3hjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgzOTQ1MzAsImV4cCI6MjEwMzk3MDUzMH0.Hav7qhKkHxejiKvbeiTWOUs0i-WFRt1r5h68jKwfCVk",
   deletionFunction: "request-account-deletion",
   webDeletionEnabled: false,
 
