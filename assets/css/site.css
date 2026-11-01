@@ -337,3 +337,10 @@ input.code{letter-spacing:.4em;font-size:24px!important;text-align:center;font-v
 
 /* small status label (delete-account confirmation) */
 .eyebrow{font:800 14px var(--sans);color:#1F7A63;margin:0 0 6px}
+
+/* separators between the brief times */
+.times{align-items:center}
+.times .sep{display:inline-block;width:.16em;height:.16em;border-radius:50%;background:var(--sun-3);flex:none}
+
+.times span:nth-of-type(1){background-position:0 0}.times span:nth-of-type(2){background-position:50% 0}.times span:nth-of-type(3){background-position:100% 0}
+.times{flex-wrap:nowrap;white-space:nowrap;gap:0 .32em;font-size:clamp(30px,8.4vw,96px)}
