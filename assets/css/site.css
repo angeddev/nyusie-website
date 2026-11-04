@@ -344,3 +344,14 @@ input.code{letter-spacing:.4em;font-size:24px!important;text-align:center;font-v
 
 .times span:nth-of-type(1){background-position:0 0}.times span:nth-of-type(2){background-position:50% 0}.times span:nth-of-type(3){background-position:100% 0}
 .times{flex-wrap:nowrap;white-space:nowrap;gap:0 .32em;font-size:clamp(30px,8.4vw,96px)}
+
+/* ---------- launch: official store badges ---------- */
+.badges{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:28px;margin-top:40px}
+.badges a{display:block;line-height:0}
+.badges a[hidden]{display:none}
+.badge-app img{height:48px;width:auto}
+/* Google's badge file has built-in transparent padding; the negative margin lines its visible edge up with Apple's badge */
+.badge-play img{height:71px;width:auto;margin:-11.5px}
+.plan .annual{margin:6px 0 10px;font:600 15px var(--sans);color:var(--ink-2)}
+.plan .annual strong{color:var(--ink)}
+.legal .tm{display:block;margin-top:6px}
