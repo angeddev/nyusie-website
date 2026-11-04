@@ -175,6 +175,7 @@ document.documentElement.className+=live?" is-live":" pre-launch";})();
       <div class="plan prem">
         <h3>Premium</h3>
         <div class="price">$5.99 <small>US / month</small></div>
+        <p class="annual">or <strong>$59.99 a year</strong>, almost two months free</p>
         <p class="line">Fresh briefs all day, every day.</p>
         <ul><li>New briefs morning, noon and night</li><li>Deep dives on any topic, whenever you want</li><li>Weather in every brief</li><li>30 days of brief history</li></ul>
         <p class="fine">Or the local equivalent in your app store. Billed through the App Store or Google Play. Cancel anytime.</p>
@@ -204,10 +205,12 @@ document.documentElement.className+=live?" is-live":" pre-launch";})();
       <span class="store"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M6 5.5h12M6 18h12"/></svg><span><small>Coming November 6</small><b>Android</b></span></span>
     </div>
     <p class="pre" style="margin:22px 0 0"><a class="btn btn-sun" href="/waitlist/">Join the waitlist</a></p>
-    <div class="stores post">
-      <a class="store" data-store="app" href="/#get"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M10.5 18.5h3"/></svg><span><small>Download on the</small><b>App Store</b></span></a>
-      <a class="store" data-store="play" href="https://play.google.com/store/apps/details?id=com.nyusie.app"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="6" y="2.5" width="12" height="19" rx="2.5"/><path d="M6 5.5h12M6 18h12"/></svg><span><small>Get it on</small><b>Google Play</b></span></a>
+    <div class="badges post">
+      <!-- Official store badges (Apple first, per Apple's guidelines). Don't edit the badge images. -->
+      <a class="badge-app" data-store="app" href="/#get"><img src="/assets/badges/app-store.svg" alt="Download on the App Store" width="144" height="48"></a>
+      <a class="badge-play" data-store="play" href="https://play.google.com/store/apps/details?id=com.nyusie.app"><img src="/assets/badges/google-play.png" alt="Get it on Google Play" width="186" height="72"></a>
     </div>
+    <p class="post small muted" id="ios-soon" hidden style="margin:14px 0 0">The iPhone app is coming soon to the App Store.</p>
   </div>
 </section>
 </main>
@@ -222,7 +225,7 @@ document.documentElement.className+=live?" is-live":" pre-launch";})();
       <div><h4>Nyusie</h4><ul><li><a href="/#how">How it works</a></li><li><a href="/#plans">Free and Premium</a></li><li><a href="/#founding">Founding members</a></li><li><a href="/support/">Support</a></li></ul></div>
       <div><h4>Legal</h4><ul><li><a href="/privacy/">Privacy Policy</a></li><li><a href="/terms/">Terms of Use</a></li><li><a href="/delete-account/">Delete your account</a></li></ul></div>
     </div>
-    <p class="legal">Nyusie is an app by 17774699 Canada Inc. © 2026. Prices in USD.</p>
+    <p class="legal">Nyusie is an app by 17774699 Canada Inc. © 2026. Prices in USD.<span class="post tm"> Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</span></p>
   </div>
 </footer>
 <script src="/assets/js/site.js" defer></script>

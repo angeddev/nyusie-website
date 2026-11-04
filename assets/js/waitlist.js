@@ -43,6 +43,8 @@
     }
     if (!$("wl-consent").checked) { say("Please tick the box so we can email you.", true); return; }
     if ($("wl-company").value) { done(); return; } // filled by bots only
+    var launchAt = Date.parse(cfg.launchAt || "2026-11-06T08:00:00-05:00");
+    if (Date.now() >= launchAt) { location.replace("/#get"); return; } // waitlist closed: Nyusie is out
 
     var sb = client();
     if (!sb) {

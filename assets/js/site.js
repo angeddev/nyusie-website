@@ -1,6 +1,7 @@
 /**
- * Points the "Download on the App Store" / "Get it on Google Play" buttons at the links
- * in config.js. If a link isn't set yet, the button says "Coming soon" and isn't clickable.
+ * Launch-day store badges. Each badge links to the store URL in config.js.
+ * If a URL isn't set yet, that badge is hidden (official badges can't be relabelled),
+ * and for the App Store a short "coming soon" line is shown instead.
  */
 (function () {
   "use strict";
@@ -12,10 +13,11 @@
       a.href = url;
       a.rel = "noopener";
     } else {
-      a.removeAttribute("href");
-      a.setAttribute("aria-disabled", "true");
-      var small = a.querySelector("small");
-      if (small) small.textContent = "Coming soon";
+      a.hidden = true;
+      if (a.getAttribute("data-store") === "app") {
+        var note = document.getElementById("ios-soon");
+        if (note) note.hidden = false;
+      }
     }
   });
 })();
