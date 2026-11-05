@@ -355,3 +355,8 @@ input.code{letter-spacing:.4em;font-size:24px!important;text-align:center;font-v
 .plan .annual{margin:6px 0 10px;font:600 15px var(--sans);color:var(--ink-2)}
 .plan .annual strong{color:var(--ink)}
 .legal .tm{display:block;margin-top:6px}
+/* Header brand scales smoothly with the screen width (Nov 2026) */
+.top .wrap{height:clamp(68px, 3vw + 56px, 92px)}
+.top .brand{font-size:clamp(22px, 1.2vw + 20px, 34px);gap:clamp(8px, .6vw + 6px, 14px)}
+.top .brand img{height:clamp(32px, 2.2vw + 29px, 50px);width:auto}
+@media(max-width:350px){.top nav a.cta{padding:8px 11px;font-size:13px}}
