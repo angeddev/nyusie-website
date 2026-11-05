@@ -24,6 +24,6 @@ window.NYUSIE_CONFIG = {
   webDeletionEnabled: false,
 
   launchAt: "2026-11-06T14:00:00-05:00",
-  appStoreUrl: "",        // e.g. "https://apps.apple.com/app/nyusie/id6829235104"
+  appStoreUrl: "https://apps.apple.com/app/nyusie/id6829235104",        // e.g. "https://apps.apple.com/app/nyusie/id6829235104"
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.nyusie.app"
 };
