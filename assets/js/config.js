@@ -23,7 +23,7 @@ window.NYUSIE_CONFIG = {
   deletionFunction: "request-account-deletion",
   webDeletionEnabled: false,
 
-  launchAt: "2026-11-06T14:00:00-05:00",
+  launchAt: "2026-12-30T14:00:00-05:00",
   appStoreUrl: "https://apps.apple.com/app/nyusie/id6829235104",        // e.g. "https://apps.apple.com/app/nyusie/id6829235104"
   playStoreUrl: "https://play.google.com/store/apps/details?id=com.nyusie.app"
 };
