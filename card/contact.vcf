@@ -1,0 +1,14 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Arora;Swapnil;;;
+FN:Swapnil Arora
+ORG:Nyusie
+TITLE:Founder
+TEL;TYPE=CELL,VOICE:+14373330017
+EMAIL;TYPE=INTERNET,WORK:arora@nyusie.com
+URL:https://nyusie.com
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/AroraSwapnil/
+item1.URL:https://www.linkedin.com/in/AroraSwapnil/
+item1.X-ABLabel:LinkedIn
+NOTE:Nyusie - audio news briefs. Don't miss a beat\, from sunrise to sunset.
+END:VCARD
