@@ -201,7 +201,7 @@ var qrcode=function(){var t=function(t,r){var e=t,n=g[r],o=null,i=0,a=null,u=[],
   const cfg = window.NYUSIE_CONFIG || {};
   const live = Date.now() >= Date.parse(cfg.launchAt || "2100-01-01T00:00:00Z") || /[?&]preview=live/.test(location.search);
   $('wl').href = live ? C.getApp : C.waitlist;
-  $('wl').textContent = live ? 'Get the app →' : 'Join the waitlist →';
+  $('wl').textContent = live ? 'Download now →' : 'Join the waitlist →';
 
   const acts = [];
   const tel = C.phone.replace(/[^\d+]/g,'');
