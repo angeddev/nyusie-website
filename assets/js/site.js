@@ -21,3 +21,19 @@
     }
   });
 })();
+
+/**
+ * "Download now" buttons: on a phone they go straight to the right store via /get/
+ * (iPhone → App Store, Android → Google Play); on a laptop they scroll to the
+ * download section with the badges and QR code. The data-download value labels
+ * where the tap came from, for analytics later.
+ */
+(function () {
+  "use strict";
+  var ua = navigator.userAgent || "";
+  var phone = /iPhone|iPad|iPod|Android/i.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+  if (!phone) return;
+  document.querySelectorAll("a[data-download]").forEach(function (a) {
+    a.href = "/get/?src=" + encodeURIComponent(a.getAttribute("data-download"));
+  });
+})();
